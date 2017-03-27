@@ -15,6 +15,65 @@ import java.util.Scanner;
  * @author aluno
  */
 public class NumeroExtenso {
+    
+    private static final String[][] TESTES =
+    {
+        { "1", "Um" },
+        { "2", "Dois" },
+        { "3", "Três" },
+        { "4", "Quatro" },
+        { "5", "Cinco" },
+        { "6", "Seis" },
+        { "7", "Sete" },
+        { "8", "Oito" },
+        { "9", "Nove" },
+        { "10", "Dez" },
+        { "11", "Onze" },
+        { "12", "Doze" },
+        { "13", "Treze" },
+        { "14", "Quatorze" },
+        { "15", "Quinze" },
+        { "16", "Dezesseis" },
+        { "17", "Dezessete" },
+        { "18", "Dezoito" },
+        { "19", "Dezenove" },
+        { "20", "Vinte" },
+        { "21", "Vinte e Um" },
+        { "22", "Vinte e Dois" },
+        { "30", "Trinta" },
+        { "31", "Trinta e Um" },
+        { "32", "Trinta e Dois" },
+        { "40", "Quarenta" },
+        { "43", "Quarenta e Três" },
+        { "44", "Quarenta e Quatro" },
+        { "50", "Cinquenta" },
+        { "56", "Cinquenta e Seis" },
+        { "57", "Cinquenta e Sete" },
+        { "60", "Sessenta" },
+        { "68", "Sessenta e Oito" },
+        { "69", "Sessenta e Nove" },
+        { "70", "Setenta" },
+        { "75", "Setenta e Cinco" },
+        { "80", "Oitenta" },
+        { "90", "Noventa" },
+        { "100", "Cem" },
+        { "110", "Cento e Dez" },
+        { "108", "Cento e Oito" },
+        { "118", "Cento e Dezoito" },
+        { "128", "Cento e Vinte e Oito" },
+        { "200", "Duzentos" },
+        { "400", "Quatrocentos" },
+        { "600", "Seiscentos" },
+        { "800", "Oitocentos" },
+        { "999", "Novecentos e Noventa e Nove" },
+        { "1000", "Mil" },
+        { "4000", "Quatro Mil" },
+        { "50500", "Cinquenta Mil e Quinhentos" },
+        { "55555", "Cinquenta e Cinco Mil e Quinhentos e Cinquenta e Cinco" },
+        { "100000", "Cem Mil" },
+        { "1000500", "Um Milhão e Quinhentos" },
+        { "2055555", "Dois Milhões e Cinquenta e Cinco Mil e Quinhentos e Cinquenta e Cinco" }
+    };
 
     /**
      * @param args the command line arguments
@@ -28,7 +87,11 @@ public class NumeroExtenso {
         
         
         // Parte inteira
-        
+        for (String[] t : TESTES) {
+            if (!extenso(Float.parseFloat(t[0])).equals(t[1])) {
+                System.out.println("Erro: " + t[0]);
+            }
+        }
 //        if (!"Um".equals(extenso(1))) System.out.println("Erro: 1");
 //        if (!"Dois".equals(extenso(2))) System.out.println("Erro: 2");
 //        if (!"Três".equals(extenso(3))) System.out.println("Erro: 3");
@@ -82,8 +145,8 @@ public class NumeroExtenso {
 //        if (!"Cinquenta Mil e Quinhentos".equals(extenso(50500))) System.out.println("Erro: 50500");;
 //        if (!"Cinquenta e Cinco Mil e Quinhentos e Cinquenta e Cinco".equals(extenso(55555))) System.out.println("Erro: 55555");
 //        if (!"Cem Mil".equals(extenso(100000))) System.out.println("Erro: 100000");
-        if (!"Um Milhão e Quinhentos".equals(extenso(1000500))) System.out.println("Erro: 1000500");
-        if (!"Dois Milhões e Cinquenta e Cinco Mil e Quinhentos e Cinquenta e Cinco".equals(extenso(2055555))) System.out.println("Erro: 2055555");
+//        if (!"Um Milhão e Quinhentos".equals(extenso(1000500))) System.out.println("Erro: 1000500");;
+//        if (!"Dois Milhões e Cinquenta e Cinco Mil e Quinhentos e Cinquenta e Cinco".equals(extenso(2055555))) System.out.println("Erro: 2055555");
         //if (!"Cem Mil".equals(extenso(100000))) System.out.println("Erro: 100000");
     }
     
